@@ -8,18 +8,19 @@ $color-dividers: rgba(0,0,0,0.06) !default;
 
 
 //plan1 pink
-$color-accent: #e91613 !default;
-$background-primary: #e91e63 !default;   //500
-$bg-primary-text-color: #fff!default;
+// $color-accent: #e91613 !default;
+// $background-primary: #e91e63 !default;   //500
+// $bg-primary-text-color: #fff!default;
 
-$background-secondary: #f06292 !default;  //300
-$bg-secondary-text-color: rgba(0,0,0,.54)!default;
+// $background-secondary: #f06292 !default;  //300
+// $bg-secondary-text-color: rgba(0,0,0,.54)!default;
 
-$background-assistant:  #fce4ec!default;  //50
-$bg-assistant-text-color: rgba(0,0,0,.45) !default;
+// $background-assistant:  #fce4ec!default;  //50
+// $bg-assistant-text-color: rgba(0,0,0,.45) !default;
 
-$background-accent: $color-accent !default;
-$bg-accent-text-color: #fff!default;
+// $background-accent: $color-accent !default;
+// $bg-accent-text-color: #fff!default;
+
 
 
 
@@ -137,19 +138,19 @@ $bg-accent-text-color: #fff!default;
 
 //plan 8 black
 
-// $color-accent: #0074a2 !default;
+$color-accent: #0074a2 !default;
 
-// $background-primary: #000 !default;   //500
-// $bg-primary-text-color: #ccc !default;
+$background-primary: #000 !default;   //500
+$bg-primary-text-color: #ccc !default;
 
-// $background-secondary: #e0e0e0 !default;  //300
-// $bg-secondary-text-color: rgba(0,0,0,.68) !default;
+$background-secondary: #e0e0e0 !default;  //300
+$bg-secondary-text-color: rgba(0,0,0,.68) !default;
 
-// $background-assistant:  #f8f8f8 !default;  //50
-// $bg-assistant-text-color: rgba(0,0,0,.54) !default;
+$background-assistant:  #f8f8f8 !default;  //50
+$bg-assistant-text-color: rgba(0,0,0,.54) !default;
 
-// $background-accent: $color-accent !default;
-// $bg-accent-text-color: #fff !default;
+$background-accent: $color-accent !default;
+$bg-accent-text-color: #fff !default;
 
 
 

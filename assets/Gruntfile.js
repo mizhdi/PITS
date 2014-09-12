@@ -15,14 +15,14 @@ module.exports = function (grunt) {
 				},
 				
 				files: {
-					'css/pink.css' : 'sass/main.scss'
+					// 'css/pink.css' : 'sass/main.scss'
 					// 'css/orange.css' : 'sass/main.scss'
 					  // 'css/green.css' : 'sass/main.scss'
 					// 'css/lime.css' : 'sass/main.scss'
 					// 'css/blue.css' : 'sass/main.scss'
 					// 'css/brown.css' : 'sass/main.scss'
 					// 'css/grey.css' : 'sass/main.scss'
-					// 'css/black.css' : 'sass/main.scss'
+					'css/black.css' : 'sass/main.scss'
 				}
 			}
 
