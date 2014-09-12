@@ -1,7 +1,8 @@
 .container {
 
-	// small screen 10px padding 
-	padding: 0 10px;
+	// small screen 5px padding 
+	padding: 0 5px;
+	width: 100%;
 
 	#header & {
 		padding: 0;
@@ -11,8 +12,6 @@
 		padding: 1.8em 10px;
 		border-top: 1px solid $border-content;
 	}
-	
-	width: 100%;
 	
 	@extend %horizontal-center;
 
@@ -30,7 +29,7 @@
 %col-xs {
 	width: 100%;
 
-	@include respond(large) {
+	@include respond(medium) {
 		width: 25%;
 	}
 }
@@ -38,7 +37,7 @@
 %col-md {
 	width: 100%;
 
-	@include respond(large) {
+	@include respond(medium) {
 		width: 70%;
 	}
 	

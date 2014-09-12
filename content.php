@@ -6,7 +6,7 @@
 	<header>
 
 		<?php
-			if ( is_single() ) :
+			if ( is_single() || is_page() ) :
 				the_title( '<h2>', '</h2>' );
 			else :
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -22,8 +22,13 @@
 				<li><span class="iconfont icon-liebiao"></span><?php the_category(', '); ?></li>
 			<?php endif; ?>
 
+			<?php if ( is_page() ) : ?>
+				<li><span class="iconfont icon-shijian"></span><?php the_time( 'Y-m-d' ); ?></li>
+				<li><span class="iconfont icon-yonghu"></span><?php the_author_link(); ?></li>
+			<?php endif; ?>
+
 			<?php if ( is_single() ) : ?>
-				<li class="pull-right dropdown"><span class="iconfont icon-fenxiang dropdown-toggle" data-toggle="dropdown"></span><?php _e( 'share', 'pits' ); ?><div class="dropdown-menu"><?php include('modules/share.php'); ?></div></li>
+				<li class="pull-right dropdown"><span class="iconfont icon-fenxiang dropdown-toggle" data-toggle="dropdown"> <?php _e( 'share', 'pits' ); ?></span><div class="dropdown-menu"><?php include('modules/share.php'); ?></div></li>
 				<li><span class="iconfont icon-shijian"></span><?php the_time( 'Y-m-d' ); ?></li>
 				<li><span class="iconfont icon-fatie"></span><?php edit_post_link(); ?></li>
 			<?php endif; ?>
@@ -57,7 +62,7 @@
 	<div class="entry-content">
 		
 		<?php 
-			if ( is_single() ) :
+			if ( is_single() || is_page() ) :
 				echo '<div class="arty">';
 				the_content();
 				wp_link_pages( array(

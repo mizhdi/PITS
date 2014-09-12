@@ -295,13 +295,17 @@
 
     /* Responsive images */
     img { 
-        margin: 0 auto;
-        display: block;
-        width: 100%; 
-        max-width: 650px;
-        height: auto;
-        border: 2px solid #fff;
-        @include transition(all .5s ease-out);
+        @extend %img-responsive;
+
+        @include respond(medium) {
+            margin: 0 auto;
+            display: block;
+            max-width: 650px;
+            height: auto;
+            border: 2px solid #fff;
+            @include transition(all .5s ease-out);
+        }
+        
     }
 
     img:hover {
