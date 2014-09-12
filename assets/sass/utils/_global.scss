@@ -1,0 +1,244 @@
+// Inheriting box-sizing Probably Slightly Better Best-Practice
+// 1. This will give you the same result, 
+//    and make it easier to change the box-sizing in plugins or other components that leverage other behavior.
+// 2. if a parent node design to work with default box-sizing(content-box),
+//    but the inside node is still border-box
+//    example: actually the two selector is the same
+//          <div class="header"><header></header></div>
+// 3. alway use the 'boder-box'
+           
+html {
+	font-size: 62.5%;
+	@include box-sizing(border-box);  // 1
+	@include font-smoothing(antialiased);
+}
+
+*,
+*:before,
+*:after {
+	@include box-sizing(inherit);  // 2
+}
+
+body {
+	position: relative;
+	font-size: $font-size-normal;
+	line-height: 1.8em;
+	color: $color-secondary-text;
+	font-family: $font-family-normal;
+	// font: roboto;
+	width: 100%;
+	min-height: 500px;
+	overflow-x: hidden;
+	position: static;
+	left: auto;
+	@include transition(all .8s ease-out);
+}
+
+.off-canvas-close {
+	
+	// @include transform(translate3d(0,0,0));
+	// @include transition(transform .5s ease-out);
+}
+
+.off-canvas-active {
+	position: absolute;
+	left: $translate3d-width;
+	@include transition(all .8s ease-out);
+	// @include transform(translate3d($translate3d-width,0,0));
+	// @include transition(transform .5s ease-out);
+}
+
+img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+.clearfix {
+	@extend %clearfix;
+}
+
+.pull-left {
+	@extend %pull-left;
+}
+
+.pull-right {
+	@extend %pull-right;
+}
+
+.alignment-center {
+	@extend %alignment-center;
+}
+
+h1 { 
+	margin: 0;
+	font-weight: normal;
+	font-size: $font-size-large;
+	font-weight: bold;
+}
+
+h2,
+h3,
+h4 {
+	margin: 0;
+	font-size: $font-size-large;
+	font-weight: 500;
+}
+
+p { margin: 0 }
+
+ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $color-accent;
+
+	&:hover { 
+		color: darken($color-accent, 15%);
+		@include transition(color .2 ease-in); 
+	}
+}
+
+.iconfont { color: $color-icons!important; }
+
+
+input, 
+textarea,
+select, 
+button {
+	margin: 0em;
+	font: -webkit-small-control;
+	color: initial;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	display: inline-block;
+	text-align: start;
+	background: none;
+	outline: none;
+	border: 1px solid $border-content;
+	@include appearance(none);
+}
+
+
+// animation 1 for sidebar-author-img
+@-webkit-keyframes spin {
+	to { @include rotate(360deg); }
+}
+
+@-moz-keyframes spin {
+    to { @include rotate(360deg); }
+}
+
+@keyframes spin {
+    to { @include rotate(360deg); }
+}
+
+
+
+@keyframes shake {
+	0%, 100% {
+		@include transform(translate3d(0, 0, 0));
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+		@include transform(translate3d(-10px, 0, 0));
+	}
+
+	20%, 40%, 60%, 80% {
+		@include transform(translate3d(10px, 0, 0));
+	}
+}
+
+
+#main {
+	margin-bottom: 2em;
+}
+
+// #content {
+// 	@include scale(0.8);
+// 	@include opacity(0.2);
+// 	@include transition(all 1s ease-in);
+// }
+
+// .animation #content {
+// 	//reset all 
+// 	@include scale(1);
+// 	@include opacity(1);
+// }
+
+.no-js {
+	#content {
+		@include scale(1);
+		@include opacity(1);
+	}
+}
+
+.pin-wrapper { margin-bottom: 2.5em }
+
+.pin { 
+	z-index: z(pin); 
+}
+
+
+.dropdown {
+	position: relative;
+
+	&.open .dropdown-menu { display: block; }
+
+	.dropdown-menu {
+		position: absolute;
+		display: none;
+		z-index: z(dropdown-menu);
+	}
+}
+
+
+
+/* 高亮选中 */
+::-moz-selection{
+  background: #08c;
+  color: #fff;
+}
+
+::selection{
+  background: #08c;
+  color: #fff;
+}
+
+
+// Disable hover effects on mobile browsers 
+// *,
+// *:before,
+// *:after {
+// 	@include respond(small) {
+// 		&:hover {
+// 			color: inherit;
+// 			background-color: inherit;
+// 			@include box-shadow(none);
+// 			text-decoration: none;
+// 		}
+// 	}
+// }
+
+#gotop span {
+	font-size: 25px;
+	color: $background-primary!important;
+}
+
+
+
+
+
+
+
+
+
+
+

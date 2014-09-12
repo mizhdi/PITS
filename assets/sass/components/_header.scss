@@ -1,0 +1,180 @@
+#header {
+	position: relative;
+	margin-bottom: $header-margin-bottom;
+	background-color: $header-bg;
+	height: $off-canvas-height;
+	border-bottom: 1px solid $header-bottom-border-color;
+	@include user-select(none);
+
+	.menu-togggle {
+		position: absolute;
+		z-index: z(off-canvas,btn);
+		font-size: $off-canvas-button-font-size;
+		text-align: center;
+		border: none;
+		background-color: #fff;
+		@include size($off-canvas-height, 49px);
+		@include respond(medium) {
+			// hide the btn
+			display: none;
+		}
+
+		.off-canvas-active &:before {
+			content: "\e61a"!important;
+		}
+	}
+
+	hgroup { 
+		@extend %clearfix; 
+
+		h1 {
+			position: absolute;
+			top: 0;
+			left: $off-canvas-height;
+			right: $off-canvas-height;
+			bottom: 0;
+			z-index: z(off-canvas,logo);
+			background-color: $hgroup-logo-bg;
+			font-weight: normal;
+
+			a {
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				line-height: $off-canvas-height;
+				color: $hgroup-logo-text-color;
+				@include square(100%);
+
+				&:hover {
+					@include animation(shake .8s infinite linear);
+				}
+			}
+
+			.off-canvas-logo & {
+				z-index: z(the-bottom);
+			}
+		}
+
+		p { 
+			display: none; 
+			@extend %text-overflow;
+			vertical-align: middle;
+			max-width: $hgroup-des-width;
+		}
+	}
+
+	.search-box {
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		display: inline-block;
+		vertical-align: middle;
+		z-index: z(off-canvas,search);
+		padding-left: $off-canvas-height;
+
+		form {
+			height: $off-canvas-height - 1px;
+		}
+
+		input {
+			padding: 10px;
+			background-color: #fff;
+			width: 100%;
+			height: 100%;
+			color: $search-text-color;
+			line-height: $off-canvas-height - 20px;
+			@include box-sizing(border-box);
+			border: none;
+
+			.off-canvas-input & {
+				border-left: 1px solid $search-border-color;
+			}
+		}
+
+		button {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			width: $off-canvas-height;
+			border: none;
+			border-left: 1px solid $search-border-color;
+			font-size: $off-canvas-button-font-size;
+			text-align: center;
+		}
+	}
+
+	@include respond(medium) {
+		@include box-shadow(0 0 5px rgba(0,0,0,.2));
+		height: $header-height;
+
+		.container {
+			@include flexbox();
+			@include flex-direction(row);
+			flex-wrap: nowrap;
+			justify-content: space-between;
+		}
+
+		// hgroup
+		hgroup {
+			min-height: 60px;
+			line-height: 60px;
+			width: 75%;
+
+			.thumb-enable & { padding-left: 1.4em; }
+
+			h1 {
+				position: static;   // cover
+				padding: 0; 		// cover
+				margin-right: 1em;
+				display: inline-block;
+				background-color: transparent;
+
+				> a {
+					font-size: $hgroup-logo-font-size;
+					color: $color-text;
+				}
+			}
+
+			p { display: inline-block; }
+		}
+
+		.search-box {
+			position: static;   // cover
+			padding-left: 0;    // cover
+			width: 25%;
+
+			.search-form {
+				margin-top: 16px;
+				position: relative;
+				width: 100%;
+
+				input {
+					width: 100%;
+					padding: 5px 10px;
+					height: $search-input-height;
+					line-height: $search-input-height - 10px;
+					border: 1px solid $search-border-color;
+					@include placeholder($search-text-color);
+					@include box-sizing(border-box);
+					@include transition(box-shadow .2s);
+
+					&:focus {
+						@include box-shadow(0 0 3px rgba(0,0,0,.2));
+						@include transition(box-shadow .5s cubic-bezier(0.2, 0.5, 0.5, 0.1));
+					}
+				}
+
+				button { 
+					border: 1px solid $search-border-color;
+					@include square($search-input-height);
+					font-size: $search-button-font-size;
+				}
+			}
+		}
+	}
+}
+
+

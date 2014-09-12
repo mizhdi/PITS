@@ -1,0 +1,112 @@
+.related-list,
+.related-thumb {
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+}
+
+.related-list {
+	
+	> ul {
+	 	@extend %clearfix;
+	 	list-style: disc inside;
+
+	 	> li {
+	 		margin-bottom: 0.8em;
+	 		
+	 		> a {
+				color: $color-text;
+				line-height: 1.5em;
+				@extend %text-overflow;
+				&:hover { color: $color-accent; }
+			}
+
+			@include respond(large) {
+				float: left;
+				width: 50%;
+				
+				&:nth-child(odd) {
+					padding-right: .5em;
+				}
+
+				&:nth-child(even) {
+					padding-left: .5em;
+				}
+			}
+	 	}
+	}
+}
+
+.related-thumb {
+	
+	> ul {
+		@include flexbox();
+		@include flex-direction(column);
+		align-items: flex-start;
+
+		> li {
+			width: 100%;
+			margin-bottom: 1em;
+			position: relative;
+			border: 5px solid #fff;
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+			overflow: hidden;
+
+			&:hover {
+				img {
+					@include transform(translateY(-15px));
+					@include transition(all 0.35s ease-in-out);
+				}
+
+				h4 {
+					@include opacity(1);
+					@include transform(translateY(0));
+					@include transition(all 0.35s ease-in-out);
+				}
+
+			}
+
+			> a {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				> img {
+					width: 100%;
+					height: 100%;
+					height: auto;
+					@include transform(translateY(0));
+					@include transition(all 0.35s ease-in-out);
+				}
+
+				> h4 {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					padding: 0 5px;
+					height: 25px;
+					line-height: 25px;
+					font-size: $font-size-small;
+					color: #fff;
+					background-color: #333;
+					@include opacity(0);
+					@include transform(translateY(30px));
+					@include transition(all 0.35s ease-in-out);
+					@extend %text-overflow;
+				}
+			}
+		}
+
+		@include respond(medium) {
+			@include flex-direction(row);
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-bottom: 0;  //reset
+			
+			> li {
+				width: 22%;
+				height: 114px;
+			}
+		}
+	}
+}

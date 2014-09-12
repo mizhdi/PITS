@@ -1,0 +1,17 @@
+%img-responsive {
+	width: 100%\9;
+	max-width: 100%;
+	height: auto;
+}
+
+%img-border {
+	display: block;
+	border: 1px solid $border-content;
+	padding: 3px;
+	background-color: #fff;
+}
+
+%img-round {
+	display: block;
+	@include border-radius(50%);
+}

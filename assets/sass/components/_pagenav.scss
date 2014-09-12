@@ -1,0 +1,26 @@
+.page-nav {
+	margin-bottom: $pagenav-margin-bottom;
+	@extend %clearfix;
+	
+	> a {
+		padding: 0 15px;
+	    display: inline-block;
+	    vertical-align: middle;
+	    height: 30px;
+	    line-height: 30px;
+	    color: $pagenav-link-color;
+	    font-size: $pagenav-font-size;
+
+	    &:last-child { float: right }
+
+	    @include respond(medium) {
+			border: none;
+			color: $color-accent;
+		}
+	}
+}
+
+#navigation,
+#infscr-loading {
+	text-align: center;
+}

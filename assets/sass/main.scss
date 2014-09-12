@@ -1,0 +1,169 @@
+/******************* sass tree ***********************
+├── base                                         *
+│   ├── _base.scss                               
+│   ├── _fonticon.scss
+│   ├── _normalize.scss
+│   └── _print.scss
+├── components
+│   ├── _article.scss
+│   ├── _authorinfo.scss
+│   ├── _comments.scss
+│   ├── _components.scss
+│   ├── _crumb.scss
+│   ├── _footer.scss
+│   ├── _header.scss
+│   ├── _menu.scss
+│   ├── module
+│   │   ├── _btn.scss
+│   │   ├── _list.scss
+│   │   ├── _meta.scss
+│   │   ├── _tag.scss
+│   │   └── _widget.scss
+│   ├── _pagenav.scss
+│   ├── _pagetitle.scss
+│   ├── _postnav.scss
+│   ├── _related.scss
+│   ├── _sidebar.scss
+│   ├── _slideshow.scss
+│   └── _sticky.scss
+├── layouts
+│   ├── _content.scss
+│   ├── _grid.scss
+│   └── _layouts.scss
+├── main.scss
+├── pages
+│   ├── _index.scss
+│   ├── _pages.scss
+│   └── _search.scss
+├── _shame.scss
+├── utils
+│   ├── functions
+│   │   ├── _shadow.scss
+│   │   └── _z-index.scss
+│   ├── _global.scss
+│   ├── mixins
+│   │   ├── _css3-property.scss
+│   │   ├── _flex.scss
+│   │   ├── _mediaquery.scss
+│   │   ├── _opacity.scss
+│   │   ├── _size.scss
+│   │   └── _text.scss
+│   ├── placeholders
+│   │   ├── _box.scss
+│   │   ├── _clearfix.scss
+│   │   ├── _float.scss
+│   │   ├── _horizontal-center.scss
+│   │   ├── _image.scss
+│   │   ├── _shadow.scss
+│   │   ├── _table.scss
+│   │   └── _text.scss
+│   └── _utils.scss
+├── _variables.scss
+└── vendors
+    ├── _animate.scss
+    ├── _arty.scss
+    ├── _pace.scss
+    └── _vendors.scss
+
+
+ */
+
+/**
+******wrapper***********************************
+*******************************header*************************
+*                         menu                               *
+*    logo                                  search            *
+**************************************************************
+
+**************************main******************************** 
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+*                                      *                     *
+**************************************************************
+
+----------------------------------------------------------------
+│
+│
+│
+│ 
+│   
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+│
+
+
+
+*/
+
+
+// data
+@import "variables";
+
+// base, reset
+@import "base/base";
+
+// includes mixins, placeholders, function, variables, global
+@import "utils/utils";
+
+// core components
+@import "components/components";
+
+// layout
+@import "layouts/layouts";
+
+// single page
+@import "pages/pages";
+
+// external style
+@import "vendors/vendors";
+
+// rapid modification
+@import "shame";
+
+
+
+
+
+
+
+
+
+
+
+
+

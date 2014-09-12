@@ -1,0 +1,27 @@
+%text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+%text-wrap {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+// 1. font: 0/0 a;
+//    overflow: hidden;    抹掉a标签按钮最上面的小点
+
+// 2. text-indent: 100%; white-spacing: nowrap; overflow: hidden;
+
+%text-hidden {
+	text-align: left;
+    letter-spacing: -3em;
+    overflow: hidden;
+
+	&:first-letter {
+		margin-left: -20em;
+	}
+}
+
+

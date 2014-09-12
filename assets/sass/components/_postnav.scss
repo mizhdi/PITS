@@ -1,0 +1,39 @@
+.post-nav {
+	margin-bottom: $postnav-margin-bottom;
+	padding-bottom: 2em;
+	border-bottom: 1px solid $border-divider;
+	@include flexbox();
+	@include flex-direction(row);
+	flex-wrap: nowrap;
+	justify-content: space-between;
+
+	p {
+		padding: 0 10px;
+		vertical-align: middle;
+		width: 49%;
+		font-size: $postnav-font-size; 
+		background-color: $postnav-bg;
+		color: $postnav-text-color;
+		height: $postnav-height;
+		line-height: $postnav-height;
+		@include border-radius(4px 0 0 4px);
+
+		&.disabled { cursor: not-allowed; }
+
+		+ p {
+			text-align: right;
+			@include border-radius(0 4px 4px 0);
+		}
+
+		a {
+			display: inline-block;
+			width: 100%;
+			height: $postnav-height;
+			line-height: $postnav-height;
+			vertical-align: middle;
+			color: $postnav-text-color;
+			@extend %text-overflow;
+		}
+
+	}
+}

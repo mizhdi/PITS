@@ -1,0 +1,13 @@
+@mixin message ($color) {
+	@extend %box-default;
+	margin-bottom: 1.8em!important;
+	color: $color;
+	background-color: #fff!important;   // to fix the error
+	border-color: darken($color, 1%)!important;
+}
+
+@each $type, $color in $text-types {
+	.text-#{$type} {
+		@include message($color);
+	}
+}

@@ -1,0 +1,2 @@
+<?php article_index(); ?>
+

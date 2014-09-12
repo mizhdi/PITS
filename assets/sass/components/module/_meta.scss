@@ -1,0 +1,50 @@
+%meta {
+	margin: .2em 0;
+	font-size: $meta-font-size;
+	color: $meta-text-color;
+	max-height: 1.2em;
+	@extend %clearfix;
+
+	> li {
+		margin-right: 1em;
+		display: inline-block;
+
+		> span {
+			color: inherit;
+			margin-right: .6em;
+			font-size: inherit;
+		}
+
+		> a {
+			color: inherit;
+			display: inline-block;
+			vertical-align: middle;
+
+			&:hover {
+				color: $meta-link-hover-color;
+				text-decoration: underline;
+			}
+		}
+
+		.dropdown-menu {
+			top: 25px;
+			left: 0;
+			min-width: 100px;
+			width: auto;
+			padding: 1em 1em 0 1em;
+			background-color: #fff;
+			@include box-shadow(0 1px 1.5px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24));
+
+			.social-share {
+				li {
+					margin-bottom: 1em;
+					a { 
+						display: block;
+						color: inherit;
+			    	}
+				}
+				
+			}	
+		}
+	}
+}

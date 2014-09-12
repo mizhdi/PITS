@@ -1,0 +1,795 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Test\n"
+"POT-Creation-Date: 2014-09-10 15:52+0800\n"
+"PO-Revision-Date: 2014-09-10 16:01+0800\n"
+"Last-Translator: sean <mizhdi@gmail.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: pits/404.php:3 pits/functions.php:281
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "这里没有内容，试一试搜索？"
+
+#: pits/comments.php:16
+#, php-format
+msgid "One thought on %2$s"
+msgstr "一想到在 %2$s"
+
+#: pits/comments.php:16
+#, php-format
+msgid "Recent Comments (%1$s)"
+msgstr "最新评论 (%1$s)"
+
+#: pits/comments.php:23 pits/comments.php:37
+msgid "Comment navigation"
+msgstr "评论导航"
+
+#: pits/comments.php:24 pits/comments.php:38
+msgid "&larr; Older Comments"
+msgstr "&larr; 较旧的评论"
+
+#: pits/comments.php:25 pits/comments.php:39
+msgid "Newer Comments &rarr;"
+msgstr "较新的评论 &rarr;"
+
+#: pits/comments.php:44
+msgid "Comments are closed."
+msgstr "评论已关闭"
+
+#: pits/content-none.php:5
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布你的第一篇文章了吗? <a href=\"%1$s\">从这里开始</a>."
+
+#: pits/content-none.php:9
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr "对不起，根据你的搜索词组没有找到相关的内容。请换一个关键字搜索一下。"
+
+#: pits/content-none.php:12
+msgid "Are you ready for some popular tags?"
+msgstr "为你提供一一些热门的标签。"
+
+#: pits/content-none.php:17
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "我们没有找到相关的你要寻找的东西，也许你可以试试搜索功能。"
+
+#: pits/content-simple.php:9
+#, fuzzy
+msgid "Post On"
+msgstr "发布于："
+
+#: pits/content-simple.php:19 pits/content.php:64
+msgid "Pages:"
+msgstr "页面："
+
+#: pits/content.php:18
+msgid "Leave a comment"
+msgstr "评论"
+
+#: pits/content.php:18
+msgid "1 Comment"
+msgstr "1条评论"
+
+#: pits/content.php:18
+msgid "% Comments"
+msgstr "%条评论"
+
+#: pits/content.php:26
+msgid "share"
+msgstr "分享"
+
+#: pits/footer.php:9
+msgid "Proudly powered by"
+msgstr "自豪地使用"
+
+#: pits/footer.php:9 pits/footer.php:10
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: pits/footer.php:10
+msgid "Theme by"
+msgstr "主题作者为"
+
+#: pits/functions.php:24
+msgid "primary menu"
+msgstr "主菜单"
+
+#: pits/functions.php:38
+msgid "Pouplar Posts (1)"
+msgstr "热门文章(1)"
+
+#: pits/functions.php:47
+msgid "Author Infomation (1)"
+msgstr "作者信息(1)"
+
+#: pits/functions.php:57
+msgid "Primary Sidebar"
+msgstr "主要的侧边拦"
+
+#: pits/functions.php:59
+msgid "except page of single"
+msgstr "适用于除了文章页面的所有侧边拦"
+
+#: pits/functions.php:67
+msgid "Content Sidebar"
+msgstr "'内容'文章模板的侧边拦"
+
+#: pits/functions.php:69
+msgid "for single-content"
+msgstr "适用于'内容'文章模板的侧边拦"
+
+#: pits/functions.php:77
+msgid "Author Sidebar"
+msgstr "'作者'文章模板侧边拦"
+
+#: pits/functions.php:79
+msgid "for single-simple"
+msgstr "适用于'作者'文章模板侧边拦"
+
+#: pits/functions.php:87
+msgid "List Sidebar"
+msgstr "'列表'文章模板侧边拦"
+
+#: pits/functions.php:89
+msgid "for single-list"
+msgstr "适用于'列表'文章模板侧边拦"
+
+#: pits/functions.php:247
+#, php-format
+msgid "<h1>Tag Archives: %s</h1>"
+msgstr "<h1>标签相关文章: %s</h1>"
+
+#: pits/functions.php:255
+#, php-format
+msgid "<h1>All posts by %s</h1>"
+msgstr "<h1>相关文章 %s</h1>"
+
+#: pits/functions.php:261
+#, php-format
+msgid "<h1>Daily Archives: %s</h1>"
+msgstr "<h1>按天归档的文章: %s</h1>"
+
+#: pits/functions.php:264
+#, php-format
+msgid "<h1>Monthly Archives: %s</h1>"
+msgstr "<h1>按月归档的文章: %s</h1>"
+
+#: pits/functions.php:264
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: pits/functions.php:267
+#, php-format
+msgid "<h1>Yearly Archives: %s</h1>"
+msgstr "<h1>按年归档的文章: %s</h1>"
+
+#: pits/functions.php:267
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: pits/functions.php:270
+#, php-format
+msgid "<h1>Category Archives: %s</h1>"
+msgstr "<h1>分类文章: %s</h1>"
+
+#: pits/functions.php:277
+#, php-format
+msgid "<h1>Search Results for: %s</h1>"
+msgstr "<h1>搜索结果: %s</h1>"
+
+#: pits/functions.php:280 pits/functions.php:367
+msgid "Not Found"
+msgstr "没有找到"
+
+#: pits/functions.php:283
+msgid "Archives"
+msgstr "文章归档"
+
+#: pits/functions.php:297 pits/options.php:178
+msgid "Home"
+msgstr "首页"
+
+#: pits/functions.php:353
+#, php-format
+msgid "Search Results for: %s"
+msgstr "搜索结果: %s"
+
+#: pits/functions.php:357
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "标签文章列表: %s"
+
+#: pits/functions.php:363
+#, php-format
+msgid "Author: %s"
+msgstr "作者: %s"
+
+#: pits/functions.php:372
+#, php-format
+msgid "( Page %s )"
+msgstr "( 页面 %s )"
+
+#: pits/functions.php:526
+msgid " a moment ago"
+msgstr "一个月之前"
+
+#: pits/functions.php:528
+msgid " years ago"
+msgstr "年前"
+
+#: pits/functions.php:529
+msgid " months ago"
+msgstr "月前"
+
+#: pits/functions.php:530
+msgid " weeks ago"
+msgstr "星期前"
+
+#: pits/functions.php:531
+msgid " days ago"
+msgstr "天前"
+
+#: pits/functions.php:532
+msgid " hours ago"
+msgstr "小时前"
+
+#: pits/functions.php:533
+msgid " minutes ago"
+msgstr "分钟前"
+
+#: pits/functions.php:534
+msgid " seconds ago"
+msgstr "秒前"
+
+#: pits/functions.php:561
+msgid "Related Articles"
+msgstr "相关文章"
+
+#: pits/functions.php:613
+msgid "Theme instructions"
+msgstr "主题说明"
+
+#: pits/functions.php:657
+#, php-format
+msgid "<span class=\"fn\">%s</span>"
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: pits/functions.php:660
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: pits/functions.php:660
+msgid "(Edit)"
+msgstr "（编辑）"
+
+#: pits/functions.php:665
+msgid "Your comment is awaiting moderation."
+msgstr "你的评论等待审核。"
+
+#: pits/header.php:25
+msgid ""
+"Hello, your browser is disabled Javascript, in order to protect the browsing "
+"effect, please turn Javascript enabled."
+msgstr ""
+"你好，你的浏览器不支持或已关闭Javascript，为了能保证浏览的效果，请开启"
+"Javascript功能。"
+
+#: pits/header.php:52
+msgid "Manage"
+msgstr "管理"
+
+#: pits/header.php:56
+msgid "Login"
+msgstr "登陆"
+
+#: pits/inc/includes/class-options-framework-admin.php:90
+#: pits/inc/includes/class-options-framework-admin.php:91
+msgid "Options"
+msgstr "配置"
+
+#: pits/inc/includes/class-options-framework-admin.php:197
+msgid "Save Options"
+msgstr "保存修改"
+
+#: pits/inc/includes/class-options-framework-admin.php:198
+msgid "Restore Defaults"
+msgstr "重置"
+
+#: pits/inc/includes/class-options-framework-admin.php:198
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "单击“确定”按钮复位。任何主题的设置将会丢失！"
+
+#: pits/inc/includes/class-options-framework-admin.php:229
+msgid "Default options restored."
+msgstr "恢复默认选项。"
+
+#: pits/inc/includes/class-options-framework-admin.php:283
+msgid "Options saved."
+msgstr "配置已保存"
+
+#: pits/inc/includes/class-options-media-uploader.php:63
+msgid "No file chosen"
+msgstr "没有文件选择"
+
+#: pits/inc/includes/class-options-media-uploader.php:66
+#: pits/inc/includes/class-options-media-uploader.php:119
+msgid "Upload"
+msgstr "上传"
+
+#: pits/inc/includes/class-options-media-uploader.php:68
+#: pits/inc/includes/class-options-media-uploader.php:120
+msgid "Remove"
+msgstr "移除"
+
+#: pits/inc/includes/class-options-media-uploader.php:71
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "升级您的版本的WordPress全媒体支持。"
+
+#: pits/inc/includes/class-options-media-uploader.php:95
+msgid "View File"
+msgstr "查看文件"
+
+#: pits/inc/includes/class-options-sanitization.php:251
+msgid "No Repeat"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:252
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:253
+msgid "Repeat Vertically"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:254
+msgid "Repeat All"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:267
+msgid "Top Left"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:268
+msgid "Top Center"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:269
+msgid "Top Right"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:270
+msgid "Middle Left"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:271
+msgid "Middle Center"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:272
+msgid "Middle Right"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:273
+msgid "Bottom Left"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:274
+msgid "Bottom Center"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:275
+msgid "Bottom Right"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:288
+msgid "Scroll Normally"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:289
+msgid "Fixed in Place"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:297
+msgid "auto"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:298
+msgid "cover"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:299
+msgid "contain"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:374
+msgid "Normal"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:375
+msgid "Italic"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:376
+msgid "Bold"
+msgstr ""
+
+#: pits/inc/includes/class-options-sanitization.php:377
+msgid "Bold Italic"
+msgstr ""
+
+#: pits/modules/author.php:6
+#, fuzzy
+msgid "Author"
+msgstr "作者: %s"
+
+#: pits/modules/pagenav.php:6 pits/modules/pagenav.php:17
+msgid "Older Entries &raquo;"
+msgstr "较旧的文章 &raquo;"
+
+#: pits/modules/pagenav.php:15
+msgid "&laquo; Newer Entries"
+msgstr "&laquo; 较新的文章"
+
+#: pits/modules/related.php:4
+msgid "Related Post"
+msgstr "相关文章"
+
+#: pits/modules/seo.php:2
+msgid "Search Results"
+msgstr "搜索结果"
+
+#: pits/modules/seo.php:8
+msgid "All articles published"
+msgstr "所有的文章已发布"
+
+#: pits/modules/share.php:3 pits/options.php:285
+msgid "Weibo"
+msgstr "微博"
+
+#: pits/modules/share.php:5
+msgid "Douban"
+msgstr "豆瓣"
+
+#: pits/modules/sticky.php:26
+msgid "stick post"
+msgstr "置顶文章"
+
+#: pits/modules/sticky.php:26
+msgid "Posted on: "
+msgstr "发布于："
+
+#: pits/modules/sticky.php:35
+msgid "Continue reading &rarr;"
+msgstr "继续阅读 &rarr;"
+
+#: pits/options.php:40
+msgid "open"
+msgstr "打开"
+
+#: pits/options.php:41 pits/options.php:50 pits/options.php:67
+msgid "close"
+msgstr "关闭"
+
+#: pits/options.php:51
+msgid "list"
+msgstr "列表"
+
+#: pits/options.php:52
+msgid "thumb"
+msgstr "缩略图"
+
+#: pits/options.php:61
+msgid "business"
+msgstr "商务"
+
+#: pits/options.php:62
+msgid "fashion"
+msgstr "时尚"
+
+#: pits/options.php:63
+msgid "life"
+msgstr "生活"
+
+#: pits/options.php:64
+msgid "nature"
+msgstr "自然"
+
+#: pits/options.php:65
+msgid "technic"
+msgstr "科技"
+
+#: pits/options.php:66
+msgid "wide"
+msgstr "户外"
+
+#: pits/options.php:107
+msgid "Site"
+msgstr "站点"
+
+#: pits/options.php:111
+#, fuzzy
+msgid "Description"
+msgstr "SEO增强，网站的描述"
+
+#: pits/options.php:112
+msgid "site description for seo"
+msgstr "微信的二维码"
+
+#: pits/options.php:118
+#, fuzzy
+msgid "Keyword"
+msgstr "关键字"
+
+#: pits/options.php:119
+msgid "site keywords for seo"
+msgstr "SEO增强，网站的关键字"
+
+#: pits/options.php:125
+#, fuzzy
+msgid "Site color"
+msgstr "站点主色"
+
+#: pits/options.php:126
+msgid "almost five color"
+msgstr "一共是7种颜色，可以选择"
+
+#: pits/options.php:141
+#, fuzzy
+msgid "Site background"
+msgstr "站点的背景图"
+
+#: pits/options.php:142
+msgid "just a white background, if you don't set up"
+msgstr ""
+"如果你不设置的话，默认是一个白色的背景图片，在assets/images/bg中提供了一些背"
+"景图片"
+
+#: pits/options.php:148
+#, fuzzy
+msgid "Content opacity"
+msgstr "'内容'文章模板的侧边拦"
+
+#: pits/options.php:149
+msgid "set up content opacity"
+msgstr "设置背景图的透明度"
+
+#: pits/options.php:156
+#, fuzzy
+msgid "Site logo"
+msgstr "网站logo"
+
+#: pits/options.php:157
+msgid "set color, font"
+msgstr "设置颜色和字体"
+
+#: pits/options.php:164
+#, fuzzy
+msgid "Favicon"
+msgstr "小图标"
+
+#: pits/options.php:165
+msgid "upload site favicon image"
+msgstr "上传网站的favicon图片"
+
+#: pits/options.php:170
+#, fuzzy
+msgid "Site Statistics"
+msgstr "站点统计"
+
+#: pits/options.php:171
+msgid "Statistics code, no script, copy the contet in <script>"
+msgstr "统计代码，如果是js代码，不要<script>标签，主要复制里面的内容就行"
+
+#: pits/options.php:182
+msgid "Slideshow"
+msgstr "轮播"
+
+#: pits/options.php:183
+#, fuzzy
+msgid "all sticky posts"
+msgstr "置顶文章"
+
+#: pits/options.php:190
+#, fuzzy
+msgid "Stiky post"
+msgstr "置顶文章"
+
+#: pits/options.php:191
+msgid "show one of stiky posts"
+msgstr "显示一篇置顶文章"
+
+#: pits/options.php:198
+#, fuzzy
+msgid "Index post thumb"
+msgstr "首页文章缩略图"
+
+#: pits/options.php:199
+msgid "carefully open this"
+msgstr "谨慎开启"
+
+#: pits/options.php:206
+msgid "Infinitescroll"
+msgstr "自动加载"
+
+#: pits/options.php:207
+msgid "next page buttun"
+msgstr "下一页按钮"
+
+#: pits/options.php:215
+msgid "Function"
+msgstr "功能"
+
+#: pits/options.php:219
+msgid "Article template"
+msgstr "文章模板"
+
+#: pits/options.php:220
+msgid "four single page model, one of them configurable"
+msgstr "4个文章页面模板,其中一个模板"
+
+#: pits/options.php:232
+msgid "Select category"
+msgstr "选择分类"
+
+#: pits/options.php:233
+msgid "select category and select template"
+msgstr "选择文章模板"
+
+#: pits/options.php:240
+msgid "Select template"
+msgstr "选择模板"
+
+#: pits/options.php:241
+msgid "choose a single template for a category"
+msgstr "选择分类对应的文章模板"
+
+#: pits/options.php:248
+#, fuzzy
+msgid "Breadcrumbs"
+msgstr "面包屑导航"
+
+#: pits/options.php:249
+msgid "open or close, close by default"
+msgstr "打开或者关闭,默认是关闭状态的"
+
+#: pits/options.php:256
+#, fuzzy
+msgid "Post Nav"
+msgstr "文章导航"
+
+#: pits/options.php:257
+msgid "open or close previous and next post links"
+msgstr "打开或者关闭上一篇和下一篇按钮"
+
+#: pits/options.php:264
+#, fuzzy
+msgid "Author Info"
+msgstr "作者信息"
+
+#: pits/options.php:265
+msgid "open or close"
+msgstr "打开或者关闭"
+
+#: pits/options.php:272
+#, fuzzy
+msgid "Related"
+msgstr "相关"
+
+#: pits/options.php:273
+msgid "none, list or thunb"
+msgstr "不显示, 列表, 缩略图"
+
+#: pits/options.php:281
+msgid "Social"
+msgstr "社会化"
+
+#: pits/options.php:286
+msgid "weibo url"
+msgstr "微博地址"
+
+#: pits/options.php:292
+msgid "RSS"
+msgstr "订阅"
+
+#: pits/options.php:293
+msgid "rss url"
+msgstr "订阅地址"
+
+#: pits/single-content.php:54
+msgid "No, this is the last article"
+msgstr "没有了，这是最后一篇文章"
+
+#: pits/single-content.php:60
+msgid "No, already the latest articles"
+msgstr "没有了，已经是最新的文章"
+
+#: pits/widget/author.php:53
+msgid "Dimensional code scanning alipay funding"
+msgstr "扫描二维码捐助"
+
+#: pits/widget/author.php:57
+msgid "Dimensional code scanning weixin concern"
+msgstr "扫描二维码关注"
+
+#: pits/widget/hot.php:2
+msgid "Hot posts"
+msgstr "热门文章"
+
+#~ msgctxt "post type general name"
+#~ msgid "words"
+#~ msgstr "说说"
+
+#~ msgctxt "post type singular name"
+#~ msgid "words"
+#~ msgstr "说说"
+
+#~ msgctxt "words"
+#~ msgid "add new words"
+#~ msgstr "新增说说"
+
+#~ msgid "add new words item"
+#~ msgstr "新增说说列表"
+
+#~ msgid "edit words"
+#~ msgstr "编辑说说"
+
+#~ msgid "new words"
+#~ msgstr "新说说"
+
+#~ msgid "view words"
+#~ msgstr "查看说说"
+
+#~ msgid "search words"
+#~ msgstr "查找说说"
+
+#~ msgid "not found words"
+#~ msgstr "没有找到说说"
+
+#~ msgid "not_found_in_trash"
+#~ msgstr "没有找到"
+
+#~ msgid "site"
+#~ msgstr "网站"
+
+#~ msgid "Statistics code"
+#~ msgstr "统计代码"
+
+#~ msgid "single page model"
+#~ msgstr "文章页面模板"
+
+#~ msgid "weibo"
+#~ msgstr "微博"
+
+#~ msgid "weixin_qrcode"
+#~ msgstr "微信二维码"
+
+#~ msgid "upload weixin qrcode image"
+#~ msgstr "上传微信的二维码图片"
+
+#~ msgid "alipay"
+#~ msgstr "支付宝"
+
+#~ msgid "upload alipay qrcode image"
+#~ msgstr "上传支付宝的二维码图片"

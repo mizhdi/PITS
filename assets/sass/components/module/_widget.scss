@@ -1,0 +1,45 @@
+// widget box type
+%widget-deauflt {
+	margin-bottom: $widget-margin-bottom;
+	background-color: $widget-bg;
+	color: $widget-text-color;
+
+	> h3 {
+		margin: 0 0 1em;
+		font-size: $widget-title-font-size;
+		color: $color-text;   //todo
+		font-weight: 500;
+	}
+}
+
+@mixin widget-border($border-color: $border-content) {
+	@extend %widget-deauflt;
+	padding: 1em;
+	border: 1px solid $border-color;
+}
+
+@mixin widget-title($title-color: $widget-title-bg) {
+	@extend %widget-deauflt;
+
+	> h3 {
+		padding: .3em .5em;
+		background-color: $title-color;
+		color: $widget-title-text-color;
+	}
+}
+
+@mixin widget-title-border($border-color: $background-secondary) {
+	@extend %widget-deauflt;
+
+	> h3 {
+		padding-left: 1em;
+		border-left: 5px solid $border-color;
+	}
+}
+
+@mixin widget-block($background: $background-assistant) {
+	@extend %widget-deauflt;
+	padding: 1em;
+	background-color: $background!important;
+	@include border-radius(4px);
+}

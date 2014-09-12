@@ -1,0 +1,227 @@
+// widget global setting
+.widget {
+	
+	// @include widget-title();
+
+	@extend %widget-deauflt;
+
+	.simple & {
+		@include widget-border();
+	}
+
+	.list & {
+		@extend %widget-deauflt;
+	}
+
+	.content & {
+
+	}
+
+	.full & {
+		
+	}
+
+	&.sidebar-author {    // always
+		padding: 1em;
+	}
+
+	> ul > li {
+		margin-bottom: 0.8em;
+		&:last-child { margin-bottom: 0 }
+
+		> a {
+			color: $color-secondary-text;
+			line-height: 1.5em;
+			&:hover { color: $color-accent; }
+		}
+	}
+}
+
+// widget module 1: hot posts
+// extend widget default style
+
+
+// widget module 2: author thumbnail
+.sidebar-author {
+	@include box-shadow(0 0 2px rgba(0,0,0,.2));
+	background-color: #fff!important;
+
+	.sidebar-author-img {
+		position: relative;
+		margin-bottom: 1.5em;
+		@extend %horizontal-center;
+		@include square(80px);
+
+		img {
+			@extend %img-round;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -40px 0 0 -40px;
+			@include box-shadow(inset 0 0 0 5px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3));
+			@include square(100%);
+			@include border-radius(50%);
+		}
+	}
+	
+	> span { font-style: italic; }
+
+	> p { 
+		position: relative;
+		margin-top: 1.2em;
+		padding: 1em;
+		line-height: 1.5em;
+		border: 1px solid $border-content;
+		color: inherit;
+		@include border-radius(4px);
+
+		&:before,
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			display: inline-block;
+			position: absolute;
+			left: 20px;
+		}
+
+		&:before {
+			top: -10px;
+			left: 22px;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-bottom: 10px solid #fff;
+			z-index: 99;
+		}
+
+		&:after {
+			top: -12px;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			border-bottom: 12px solid $border-content;
+			z-index: 9;
+		}
+	}
+
+	ul {
+		margin-top: 1em;
+
+		> li { 
+			margin: 0 1em .2em 0;
+			display: inline-block; 
+
+			.dropdown-menu {
+				top: 25px;
+				left: 0;
+				padding: 1em;
+				width: 12em;
+				background-color: #fff;
+				z-index: z(qrcode);
+				@include box-shadow(0 1px 1.5px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24));
+
+				p {
+					margin-bottom: 1em;
+				}
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.iconfont { cursor: pointer; }
+
+			.icon-blhome { color: #333!important; }
+
+			.icon-iconweibo { color: #d72c2b!important; }
+
+			.icon-github { color: #333!important; }
+
+			.icon-twitter { color: #77c3de!important; }
+
+			.icon-google { color: #c62a2a!important; }
+
+			.icon-facebook { color: #3a62ae!important; }
+
+			.icon-email { color: #ccc!important; }
+
+			.icon-douban { color: #269036!important; }
+
+			.icon-linkedin { color: #367ca2!important; }
+
+			.icon-zhifufangshi { color: #ffd632!important; }
+
+			.icon-weibiaoti1 { color: #269036!important; }
+		}
+	}
+	
+	
+}
+
+
+// widget module 3: sidebar-list
+.sidebar-list {
+	@include widget-block($background-assistant);
+
+	#article-index {
+		h3 { 
+			margin-bottom: .6em;
+			text-align: center; 
+			color: $background-primary;
+			font-weight: 600;
+		}
+
+		ul {
+			li {
+
+				a {
+					color: $color-secondary-text;
+				}
+
+				&.active a {
+					color: $background-primary;
+				}
+			}
+		}
+	}
+
+}
+
+/*
+**   default widget style  
+************************************/
+
+// calendar
+#calendar_wrap table {
+	@extend %table;
+}
+
+
+// tagcloud
+.tagcloud a {
+	display: inline-block;
+	margin: 0 .3em .3em 0;
+	color: $color-secondary-text;
+	&:hover {
+		text-decoration: underline;
+		color: $color-accent;
+	}
+}
+
+// cat list
+.cat-item {
+	display: inline;
+	margin: 0 .8em .8em 0;
+	width: 50%;
+}
+
+// recent comments
+#recentcomments a {
+	color: $color-accent;
+
+	&:hover { text-decoration: underline; }
+}

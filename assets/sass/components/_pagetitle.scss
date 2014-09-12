@@ -1,0 +1,14 @@
+.page-title {
+	margin-bottom: $pagetitle-margin-bottom;
+	padding: 1em 1.5em;
+	background-color: $pagetitle-bg;
+	border-left: 5px solid $pagetitle-border-left-color;
+	color: $pagetitle-text-color;
+	font-size: $pagetitle-font-size;
+
+	h1 {
+		margin-bottom: 5px;
+		color: $pagetitle-title-color;
+		font-weight: normal;
+	}
+}

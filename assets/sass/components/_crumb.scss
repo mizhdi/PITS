@@ -1,0 +1,29 @@
+#crumbs {
+	margin-bottom: $crumb-margin-bottom;
+	padding: 3px 5px;
+	font-size: $crumb-font-size;
+	color: $crumb-text-color;
+	background-color: $crumb-bg;
+	@extend %text-overflow;
+
+	a {
+		display: inline-block;
+		margin: 0 .3em;
+		font-size: inherit;
+		vertical-align: middle;
+		color: inherit;
+
+		&:hover {
+			color: darken($crumb-text-color, 10%);
+			text-decoration: underline;
+		}
+	}
+
+	span {
+		display: inline-block;
+		margin: 0 .3em;
+		vertical-align: middle;
+		font-size: inherit;
+		color: inherit;
+	}
+}

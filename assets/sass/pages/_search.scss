@@ -1,0 +1,34 @@
+#flex-box {
+
+	.search & article {
+		p { margin-bottom: 1.5em; }
+
+		a { margin-right: .8em; }
+	}
+	
+
+	.search-form {
+		margin-bottom: 1.5em;
+		input {
+			display: inline-block;
+			height: 30px;
+			padding: 5px 10px;
+			line-height: 20px;
+			width: 220px;
+			border: 1px solid $border-content;
+			@include box-sizing(border-box);
+		}
+
+		button {
+			display: inline-block;
+			color: #fff!important;
+			background-color: $background-primary;
+			text-align: center;
+			width: 30px;
+			height: 30px;
+			line-height: 1;
+			border: 0;
+		}
+	}
+
+}

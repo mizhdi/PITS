@@ -1,0 +1,17 @@
+{
+  "name": "pits",
+  "version": "0.1.0",
+  "author": "sean <mizhdi@gmail.com>",
+  "description": "A Simple Wordpress Theme",
+  "keywords": "theme",
+  "bugs": {
+    "email": "mizhdi@gmail.com"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "sass": "^0.5.0"
+  }
+}

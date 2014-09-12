@@ -1,0 +1,210 @@
+// nav
+
+#main-menu {
+
+	position: fixed;
+	left: -$translate3d-width;
+	top: 0;
+	z-index: z(off-canvas,nav-menu);
+	width: $translate3d-width;
+	height: 100%;
+	overflow-x: hidden; 
+	overflow-y: auto;
+	background: nth($nav,1);
+	@include box-shadow(1px 0 1.5px rgba(0,0,0,0.12), 1px 0 1px rgba(0,0,0,0.24));
+	@include transition(opacity .2s ease-out);
+	// @include transform(translate3d(-$translate3d-width, 0, 0));
+
+	.off-canvas-active & {
+		left: 0;
+		z-index: -1;
+	}
+
+	.off-canvas-close & {
+		position: static;
+		z-index: z(off-canvas,nav-menu);
+	}
+		
+
+	.login {
+		padding-top: 1.5em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid nth($nav,3);
+
+		img {
+			@extend %img-round;
+			margin: 0 auto;
+		}
+
+		a { 
+			margin: 1.2em auto;
+			display: block;
+			color: #fff;
+			border: 1px solid nth($nav,3);
+			@include size(56px,20px);
+			line-height: 20px;
+			text-align: center; 
+			font-size: $font-size-small;
+		}
+
+		@include respond(medium) { display: none; }
+	}
+	
+	.nav-menu {
+
+		@include flexbox();
+			@include flex-direction(row);
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		
+		> li {
+			width: 50%;
+
+			//submenu
+			&.menu-item-has-children {
+				.sub-menu {
+					display: none;
+					background-color: $menu-submenu-bg;
+
+					> li > a {
+						display: block;
+						width: 100%;
+						padding: .8em 0 .8em 6em;
+						color: $menu-submenu-link-color;
+						border-bottom: 1px dashed $menu-submenu-border-color;
+
+						&:hover {
+							background-color: $menu-submenu-link-hover-bg;
+						}
+					}
+				}
+			}
+
+			&:nth-child(odd) > a {
+				text-align: right;
+				padding-right: 1em;
+				// border-right: 1px dashed nth($nav,3);
+			}
+
+			&:nth-child(even) > a {
+				text-align: left;
+				padding-left: 1em;
+			}
+
+			> a {
+				display: block;
+				padding-top: 1em;
+				padding-bottom: 1em;
+				color: nth($nav,2);
+				word-spacing: 0.2em;
+				letter-spacing: 0.2em;
+				border-bottom: 1px dashed nth($nav,3);
+				@include transition(background .3s ease);
+			}
+		}
+	}
+		
+	@include respond(medium) {
+		@include box-shadow(none); //cover
+		position: static;  //cover
+		width: 100%;   // cover
+		left: auto;
+		@include transform(translate3d(0, 0, 0));  //cover
+		background-color: transparent;   //cover
+		overflow-x: visible; //cover
+		overflow-y: visible; //cover
+		height: 35px;
+
+		@include gradient-vertical(nth($nav,1), darken(nth($nav,1), 1%));
+
+		.nav-menu {
+			min-height: 35px;
+			@include flexbox();
+			@include flex-direction(row);
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+
+			&:before { display: none; }
+		
+			> li {
+				width: auto;
+				border-left: 1px solid nth($nav,3);
+
+				&:last-child {
+					border-right: 1px solid nth($nav,3);
+				}
+
+				> a {
+					border-bottom: none;  //cover
+					word-spacing: 0;  //cover
+					letter-spacing: 0;  //cover
+					padding: 0 1.5em!important;
+					height: $menu-height;
+					line-height: $menu-height;
+					font-weight: 600;
+					text-align: center!important;
+
+					&:hover,
+					&.current-menu-item  {
+						color: darken(nth($nav,2), 5%);
+						@include transition(color .3 ease-in);
+						background-color: darken(nth($nav,1), 5%);
+					}
+				}
+
+				//submenu
+				&.menu-item-has-children {
+					position: relative;
+
+					> a:after {
+						content: "\00BB";
+						display: inline-block;
+						width: 10px;
+						line-height: 1;
+						vertical-align: middle;
+						margin-left: 5px;
+						@include rotate(90deg);
+					}
+
+					.sub-menu {
+						display: block;   //reset
+						visibility: hidden;
+						position: absolute;
+						top: $menu-height;
+						left: 0;
+						z-index: z(index,sub-menu);
+						width: 160%;
+						height: auto;
+						border: 1px solid nth($nav,3);
+						border-top: none;
+						@include box-shadow(0 2px 5px -1px rgba(0,0,0,0.4));
+						@include opacity(0);
+						@include scale(0);
+
+						> li {
+							> a { 
+								font-weight: 600;
+								padding: .5em 1em .5em 1.5em;
+								color: nth($nav,2);
+								border-bottom: 1px solid nth($nav,3);
+								&:hover { background-color: darken(nth($nav,1), 5%); }
+							}
+						}
+					}
+
+
+					&:hover {
+						.sub-menu {
+							visibility: visible;
+							@include opacity(1);
+							@include scale(1);
+							@include transition(all .2s ease-out);
+						}
+					}
+				}
+
+			}
+		}
+	}	
+	
+}

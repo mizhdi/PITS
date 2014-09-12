@@ -1,0 +1,273 @@
+// Global article settings
+article[id*="post-"] {
+	margin-bottom: $article-margin-bottom;
+	padding-bottom: $article-padding-bottom;
+	border-bottom: 1px solid $article-border-bottom-color;
+	@extend %clearfix;
+
+	
+	.home & {
+		@include flexbox();
+		@include flex-direction(column);
+		align-items: flex-start;
+
+  		@include respond(medium) {
+  			display: block;
+  		}
+
+		header { 
+			width: 100%;
+			@include order(1); 
+		}
+
+		.entry-thumb { @include order(2); }
+
+		.entry-content { @include order(3); }
+
+		footer { @include order(4); }
+	}
+
+	h2 { 
+		margin-bottom: .5em;
+		color: $color-text;
+
+		> a {
+			color: $color-text;
+			&:hover { color: $color-accent; }
+		}
+	}
+
+
+	.full &,
+	.simple &,
+	.list &,
+	.content & {
+		padding: 0 0 1em 0;   // reset
+	}
+
+	//article list h2 > a
+	.entry-title > a {  
+		width: 100%;
+		@extend %text-overflow;
+	}
+
+	.entry-thumb {
+		margin-bottom: 1em;
+		
+		img {
+			width: 100%;
+			max-width: 400px;
+			@extend %horizontal-center;
+			@extend %img-border;
+		}
+
+		@include respond(medium) {
+			float: left;
+			margin-right: 1em;
+
+			img {
+				max-width: 255px;  //reset
+				margin: 0;         //reset
+			}
+		} 
+	}
+
+	// header 
+	header {
+		margin-bottom: 1.2em;
+
+		.entry-meta {
+			@extend %meta;
+		}
+
+		// single 
+		.single &,
+		.full &,
+		.list &,
+		.content & {
+			margin-bottom: 2em;
+
+			> h2 {
+				font-size: floor(($font-size-large * 1.85));
+				line-height: 1.8em;
+				margin-bottom: .5em;  // reset
+			}
+		}
+
+		.full & {
+			text-align: center;
+		}
+
+		.content & {
+			padding-bottom: 1em;
+			border-bottom: 1px dashed $border-divider;
+		}
+	}
+
+	// content
+	.entry-content {
+
+		// artile list p
+		p.excerpt {
+			@extend %clearfix;
+			line-height: 1.8em;
+			text-indent: 2em;    // todo: fix the bug, it doesn't work
+			text-align: left;
+
+			> a.meta-nav {
+				float: right;
+			}
+		}
+
+
+		.default-btn {
+			margin-bottom: 1.8em;
+			text-align: center;
+
+			a {
+				@extend %btn;
+			}
+
+		}
+
+
+		.color-btn {
+			margin-bottom: 1.8em;
+			text-align: center;
+
+			a {
+				@include btn-colorful($background-primary);
+			}
+
+		}
+
+		// h1,h2,h3,h4,h5,h6 {
+		// 	font-size: $font-size-large;
+		// 	font-weight: 500;
+		// 	margin: 2em 0 1.5em 0;
+		// 	line-height: 1.5em;
+		// }
+
+		// h1 {
+		// 	// not use
+		// }
+
+		// h2 {
+		// 	// deauflt
+		// }
+
+		// h3 {
+		// 	padding: .3em .8em;
+		// 	background-color: $background-assistant;
+		// }
+
+		// h4 {
+		// 	padding-left: .8em;
+		// 	border-left: 5px solid $background-assistant;
+		// }
+
+		// h5 {
+		// 	position: relative;
+		// 	padding-bottom: .5em;
+		// 	border-bottom: 3px solid $background-assistant;
+
+		// 	&:after {
+		// 		content: '';
+		// 		position: absolute;
+		// 		left: 0;
+		// 		bottom: -3px;
+		// 		width: 8%;
+		// 		height: 3px;
+		// 		background-color: $color-accent;
+		// 	}
+		// }
+
+		// h6 {
+		// 	padding-bottom: .5em;
+		// 	border-bottom: 1px solid $background-assistant;
+		// }
+
+		// blockquote {
+		// 	margin: 1.5em 0;
+		// 	padding: 1.5em;
+		// 	border-left: 5px solid $background-assistant;
+		// 	overflow: hidden;
+		// }
+
+		// pre {
+		// 	margin: 1.5em 0;
+		// 	padding: 1.5em;
+		// 	clear: both;
+		// 	font-family: $font-family-pre;
+		// 	background-color: #f8f8f8;
+		// 	border: 1px solid $border-content;
+		// 	line-height: 1.5em;
+		// 	max-height: 500px;
+		// 	overflow-y: auto;
+		// 	white-space: wrap;
+		// }
+
+		// code {
+		// 	display: inline;
+		// 	padding: 2px 4px;
+		// 	margin: 0 2px;
+		// 	font-family: $font-family-code;
+		// 	line-height: 1.7em;
+		// 	vertical-align: middle;
+		// 	white-space: nowrap;
+		// 	color: inherit;
+		// 	background-color: #f8f8f8;
+		// 	border: 1px solid $border-content;
+		// 	@include border-radius(3px);
+		// }
+	
+		// p {
+		// 	margin: 1.5em 0;
+		// 	line-height: 2.2em;
+		// }
+
+		// img {
+		// 	margin: 1.5em 0;
+		// 	display: block;
+
+		// 	&:hover {
+		// 		@include box-shadow(0 0 5px rgba(0,0,0,0.2));
+		// 	}
+		// }
+
+		// strong { font-weight: bold; }
+
+		// em { font-style: italic; }
+
+		// ul {
+		// 	margin: 1.5em 0;
+		// 	padding-left: 1.5em;
+		// 	list-style-type: square;
+
+		// 	li {
+		// 		margin: 1em 0;
+		// 		line-height: 1.8em;
+
+		// 		ul { 
+		// 			padding-left: 1.5em;
+		// 			list-style-type: disc; 
+		// 		}
+		// 	}
+		// }
+
+		// table { @extend %table }
+
+		// hr {
+		// 	margin: 1em;
+		// 	border: 1px solid $border-content;
+		// }
+	}
+
+	footer {
+
+		// tag
+		a { @include tag-block(); }
+
+		.full & a { @extend %tag-normal; }
+	}
+}

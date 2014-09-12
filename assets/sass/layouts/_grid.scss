@@ -1,0 +1,45 @@
+.container {
+
+	// small screen 10px padding 
+	padding: 0 10px;
+
+	#header & {
+		padding: 0;
+	}
+
+	footer & {
+		padding: 1.8em 10px;
+		border-top: 1px solid $border-content;
+	}
+	
+	width: 100%;
+	
+	@extend %horizontal-center;
+
+	@include respond (medium) {
+		padding: 0;
+		width: 90%;
+	}
+
+	@include respond (large) {
+		padding: 0;
+		width: 1080px;
+	}
+}
+
+%col-xs {
+	width: 100%;
+
+	@include respond(large) {
+		width: 25%;
+	}
+}
+
+%col-md {
+	width: 100%;
+
+	@include respond(large) {
+		width: 70%;
+	}
+	
+}

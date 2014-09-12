@@ -1,0 +1,18 @@
+%tag-normal {
+	display: inline-block;
+	margin: 5px 10px 5px 0;
+	font-size: $tag-font-size;
+	white-space: nowrap;
+	color: $tag-link-color;
+	line-height: 1.4em;
+}
+
+@mixin tag-block($bg: $tag-bg) {
+	@extend %tag-normal;
+	padding: 0 5px;
+	background-color: $bg;
+
+	&:hover {
+		color: darken($tag-link-color, 5%);
+	}
+}

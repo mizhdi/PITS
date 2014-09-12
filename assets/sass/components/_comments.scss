@@ -1,0 +1,115 @@
+.comment-list {
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid $commentform-bottom-border-color;
+
+	> li {
+		margin-bottom: 1.2em;
+		min-height: 50px;
+
+		.comment-body {
+			margin-bottom: 1em;
+		}
+
+		.children {
+			margin-left: 58px;
+		}
+	}
+
+	.comment-time {
+		margin: -48px 0 10px 58px;
+		color: #999;
+		font-size: $font-size-small;
+		line-height: 1;
+
+		span {
+			color: #333;
+		}
+
+		> a {
+			color: #999;
+		}
+	}
+
+	p { 
+		margin-left: 58px;
+		line-height: 1.5em;
+		overflow: hidden;
+	}
+}
+
+#respond {
+	
+	#commentform {
+		.comment-notes,
+		.required,
+		.form-allowed-tags { display: none; }
+
+		> p {
+			position: relative;
+			display: table;
+			margin-bottom: 1.5em;
+			width: 100%;
+
+			@include respond(medium) {
+				width: 40%;
+			}
+
+			&.textarea {
+				width: 100%;
+			}
+
+			label {
+				display: table-cell;
+				padding: 6px 10px;
+				background-color: $commentform-lable-bg;
+				width: 1%;
+				text-align: center;
+				line-height: 1;
+				white-space: nowrap;
+				vertical-align: middle;
+				border: 1px solid lighten($commentform-border-color, 40%);
+
+				> span {
+					font-size: $font-size-large;
+					color: $background-primary!important;
+				}
+
+				+ input {
+					display: table-cell;
+					padding: 6px 12px;
+					height: 30px;
+					width: 100%;
+					color: $commentform-text-color;
+					border: 1px solid lighten($commentform-border-color, 40%);
+					border-left: none;
+				}
+
+			}
+
+			input[type="submit"] {
+				margin-bottom: 1em;
+				@extend %btn;
+			}
+		}
+
+		textarea {
+			padding: 6px;
+			width: 100%;
+			min-height: 250px;
+			color: $commentform-text-color;
+			overflow-y: auto;
+			overflow-x: hidden;
+			white-space: wrap; 
+			border: 1px solid $commentform-border-color;
+			line-height: 1.8em;
+			resize: none;
+		}
+
+		textarea:focus {
+			border-color: $background-primary;
+		}
+
+	}	
+}
+
