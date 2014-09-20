@@ -2,13 +2,13 @@
 
 	<div class="sidebar-author-img">
 	<?php
-		$author_email = get_the_author_email();
+		$author_email = get_the_author_meta('email');
 		echo get_avatar($author_email, '80');
 	?>
 	</div>
 	
 	<span>by <?php the_author_link(); ?></span>
-	<p><?php the_author_description(); ?></p>
+	<p><?php the_author_meta('description'); ?></p>
 
 	<!-- author social -->
 	<ul>

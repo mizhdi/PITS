@@ -20,11 +20,16 @@
 							
 	?>
 		<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
-			<?php post_thumbnail(756,500); ?>
+			<?php 
+				if ( has_post_thumbnail() ) {
+					the_post_thumbnail( 'slide-thumb' );
+				} 
+			?>
 			<p><?php the_title(); ?></p>
 		</a>				
 
 	<?php endwhile; wp_reset_query(); ?>
 
 	</div>
+	
 <?php } ?>

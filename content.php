@@ -1,5 +1,5 @@
 <!-- article -->
-<article id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( is_home() ) : index_thumbnail();	endif; ?>
 
@@ -28,7 +28,7 @@
 			<?php endif; ?>
 
 			<?php if ( is_single() ) : ?>
-				<li class="pull-right dropdown"><span class="iconfont icon-fenxiang dropdown-toggle" data-toggle="dropdown"> <?php _e( 'share', 'pits' ); ?></span><div class="dropdown-menu"><?php include('modules/share.php'); ?></div></li>
+				<li class="pull-right dropdown"><span class="iconfont icon-fenxiang dropdown-toggle" data-toggle="dropdown"> <?php _e( 'share', 'pits' ); ?></span><div class="dropdown-menu"><?php include 'modules/share.php'; ?></div></li>
 				<li><span class="iconfont icon-shijian"></span><?php the_time( 'Y-m-d' ); ?></li>
 				<li><span class="iconfont icon-fatie"></span><?php edit_post_link(); ?></li>
 			<?php endif; ?>

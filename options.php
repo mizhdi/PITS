@@ -52,7 +52,7 @@ function optionsframework_options() {
 		'thumb' => __('thumb', 'pits'));
 
 	$typography_defaults = array(
-		'size' => '25px',
+		'size' => '20px',
 		'face' => 'sans-serif',
 		'style' => 'normal',
 		'color' => '#lalala' );
@@ -210,39 +210,57 @@ function optionsframework_options() {
 		'type' => 'radio',
 		'options' => $test_array);
 
+	$options[] = array(
+		'name' => __('Footer Menu', 'pits'),
+		'desc' => __('show or hide footer menu', 'pits'),
+		'id' => 'footer_menu',
+		'std' => 'close',
+		'type' => 'radio',
+		'options' => $test_array);
+
 	// 高级设置
 	$options[] = array(
 		'name' => __('Function', 'pits'),
 		'type' => 'heading');
 
+	// $options[] = array(
+	// 	'name' => __("Article template", 'pits'),
+	// 	'desc' => __("four single page model, one of them configurable", 'pits'),
+	// 	'id' => "single-module",
+	// 	'std' => "single-simple",
+	// 	'type' => "images",
+	// 	'options' => array(
+	// 		'single-simple' => $imagepath . 'simple.png',
+	// 		'single-content' => $imagepath . 'content.png',
+	// 		'single-full' => $imagepath . 'full.png',
+	// 		'single-list' => $imagepath . 'list.png'));
+
+	// if ( $options_categories ) {
+	// $options[] = array(
+	// 	'name' => __('Select category', 'pits'),
+	// 	'desc' => __('select category and select template', 'pits'),
+	// 	'id' => 'select-category',
+	// 	'type' => 'select',
+	// 	'options' => $options_categories);
+	// }
+
+	// $options[] = array(
+	// 	'name' => __('Select template', 'pits'),
+	// 	'desc' => __('choose a single template for a category', 'pits'),
+	// 	'id' => 'select-template',
+	// 	'std' => 'content',
+	// 	'type' => 'select',
+	// 	'options' => $type_array);
+
 	$options[] = array(
-		'name' => __("Article template", 'pits'),
-		'desc' => __("four single page model, one of them configurable", 'pits'),
-		'id' => "single-module",
-		'std' => "single-simple",
+		'name' => __("Sidebar Module", 'pits'),
+		'desc' => __("choose left-sidebar or right-sidebar", 'pits'),
+		'id' => "sidebar-module",
+		'std' => "right-sidebar",
 		'type' => "images",
 		'options' => array(
-			'single-simple' => $imagepath . 'simple.png',
-			'single-content' => $imagepath . 'content.png',
-			'single-full' => $imagepath . 'full.png',
-			'single-list' => $imagepath . 'list.png'));
-
-	if ( $options_categories ) {
-	$options[] = array(
-		'name' => __('Select category', 'pits'),
-		'desc' => __('select category and select template', 'pits'),
-		'id' => 'select-category',
-		'type' => 'select',
-		'options' => $options_categories);
-	}
-
-	$options[] = array(
-		'name' => __('Select template', 'pits'),
-		'desc' => __('choose a single template for a category', 'pits'),
-		'id' => 'select-template',
-		'std' => 'content',
-		'type' => 'select',
-		'options' => $type_array);
+			'left-sidebar' => $imagepath . 'left.png',
+			'right-sidebar' => $imagepath . 'right.png'));
 
 	$options[] = array(
 		'name' => __('Breadcrumbs', 'pits'),

@@ -1,9 +1,8 @@
 // nav
 
 #main-menu {
-
 	position: fixed;
-	left: -$translate3d-width;
+	left: -$translate3d-width;;
 	top: 0;
 	z-index: z(off-canvas,nav-menu);
 	width: $translate3d-width;
@@ -11,21 +10,16 @@
 	overflow-x: hidden; 
 	overflow-y: auto;
 	background: nth($nav,1);
+	@include opacity(0);
 	@include box-shadow(1px 0 1.5px rgba(0,0,0,0.12), 1px 0 1px rgba(0,0,0,0.24));
-	@include transition(opacity .2s ease-out);
-	// @include transform(translate3d(-$translate3d-width, 0, 0));
+	@include transition(opacity .8s ease-out);
 
 	.off-canvas-active & {
-		left: 0;
-		z-index: -1;
+		@include opacity(1);
+		@include transition(opacity .8s ease-out);
+		z-index: 999;
 	}
-
-	.off-canvas-close & {
-		position: static;
-		z-index: z(off-canvas,nav-menu);
-	}
-		
-
+	
 	.login {
 		padding-top: 1.5em;
 		padding-bottom: 1em;
@@ -109,10 +103,12 @@
 		position: static;  //cover
 		width: 100%;   // cover
 		left: auto;
+		@include opacity(1); // cover
 		@include transform(translate3d(0, 0, 0));  //cover
 		background-color: transparent;   //cover
 		overflow-x: visible; //cover
 		overflow-y: visible; //cover
+		z-index: 999;     //cover
 		height: 35px;
 
 		@include gradient-vertical(nth($nav,1), darken(nth($nav,1), 1%));

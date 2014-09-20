@@ -8,6 +8,8 @@
 // 3. alway use the 'boder-box'
            
 html {
+	width: 100%;
+	overflow: hidden;
 	font-size: 62.5%;
 	@include box-sizing(border-box);  // 1
 	@include font-smoothing(antialiased);
@@ -20,37 +22,38 @@ html {
 }
 
 body {
-	position: relative;
 	font-size: $font-size-normal;
 	line-height: 1.8em;
 	color: $color-secondary-text;
 	font-family: $font-family-normal;
-	// font: roboto;
 	width: 100%;
+	overflow: hidden;
 	min-height: 500px;
-	overflow-x: hidden;
-	position: static;
-	left: auto;
-	@include transition(all .8s ease-out);
+	background: #fff;
+
+	@media (max-width:500px) {
+		background-image: none!important;
+	}
 }
 
-.off-canvas-close {
-	
+#wrapper {
+	width: 100%;
+	overflow: hidden;
 	// @include transform(translate3d(0,0,0));
-	// @include transition(transform .5s ease-out);
+	@include transition(all 0s ease-out);
 }
 
-.off-canvas-active {
-	position: absolute;
-	left: $translate3d-width;
-	@include transition(all .8s ease-out);
-	// @include transform(translate3d($translate3d-width,0,0));
-	// @include transition(transform .5s ease-out);
+.off-canvas-active #wrapper {
+	overflow: visible;
+	@include transform(translate3d($translate3d-width,0,0));
+	@include transition(all .3s ease-out);
+	@include backface-visibility(hidden);
 }
 
 img {
+	display: block;
+	width: 100% \9;
 	max-width: 100%;
-	width: auto;
 	height: auto;
 }
 

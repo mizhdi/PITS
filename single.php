@@ -1,25 +1,27 @@
 <?php 
 
 	get_header();
+
+	$format = get_post_format();
+
+	echo '<div id="content" class="'.$format.'">';
 	
-	$post = $wp_query->post; 
-
-	$cat = of_get_option('select-category');
-
-	$modal = of_get_option('select-template', 'content');
+	if ( have_posts() ):
 	
-	if ( in_category($cat) ) { 
+		while ( have_posts() ) : the_post();
 
-		include(TEMPLATEPATH . '/single-'.$modal.'.php'); 
+			if ( false === $format ) {
+				$format = 'standard';
+			}
 
-	} else { 
+			get_template_part( 'single', $format );
+
+		endwhile; 
+
+	else: get_template_part( 'content', 'none');
+
+	endif;
 	
-		$module =  of_get_option( 'single-module', 'content');
-
-		get_template_part( $module );
-
-	} 
-
 	get_footer();
 
 ?>

@@ -1,13 +1,14 @@
 <?php if ( is_home() ) { ?><title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title><?php } ?>
-<?php if ( is_search() ) { ?><title><?php _e( 'Search Results', 'pits'); ?> - <?php bloginfo('name'); ?></title><?php } ?>
-<?php if ( is_single() ) { ?><title><?php echo trim(wp_title('',0)); ?> - <?php bloginfo('name'); ?></title><?php } ?>
+<?php if ( is_search() ) { ?><title>搜索结果 - <?php bloginfo('name'); ?></title><?php } ?>
+<?php if ( is_single() ) { ?><title><?php echo trim(wp_title('',0)); ?><?php if (get_query_var('page')) { echo '-第'; echo get_query_var('page'); echo '页';}?> - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if ( is_page() ) { ?><title><?php echo trim(wp_title('',0)); ?> - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if ( is_category() ) { ?><title><?php single_cat_title(); ?> - <?php bloginfo('name'); ?></title><?php } ?>
-<?php if ( is_month() ) { ?><title><?php the_time('F'); ?> - <?php bloginfo('name'); ?></title><?php } ?>
+<?php if ( is_year() ) { ?><title><?php the_time('Y年'); ?>所有文章 - <?php bloginfo('name'); ?></title><?php } ?>
+<?php if ( is_month() ) { ?><title><?php the_time('F'); ?>份所有文章 - <?php bloginfo('name'); ?></title><?php } ?>
+<?php if ( is_day() ) { ?><title><?php the_time('Y年n月j日'); ?>所有文章 - <?php bloginfo('name'); ?></title><?php } ?>
 <?php if (function_exists('is_tag')) { if ( is_tag() ) { ?><title><?php  single_tag_title("", true); ?> - <?php bloginfo('name'); ?></title><?php } ?> <?php } ?>
-<?php if ( is_author() ) {?><title><?php wp_title('');?><?php _e( 'All articles published', 'pits'); ?> - <?php bloginfo('name'); ?></title><?php }?>
-
-<?php 
+<?php if ( is_author() ) {?><title><?php wp_title('');?>发表的所有文章 - <?php bloginfo('name'); ?></title><?php }?>
+<?php
 if (!function_exists('utf8Substr')) {
  function utf8Substr($str, $from, $len)
  {
@@ -26,9 +27,9 @@ if ( is_single() ){
     $post_content_r = explode("\n",trim(strip_tags($post->post_content)));
     $post_content = $post_content_r['0'];
    }
-         $description = utf8Substr($post_content,0,220);  
+         $description = utf8Substr($post_content,0,220);
   } 
-    $keywords = "";     
+    $keywords = "";
     $tags = wp_get_post_tags($post->ID);
     foreach ($tags as $tag ) {
         $keywords = $keywords . $tag->name . ",";
@@ -37,10 +38,20 @@ if ( is_single() ){
 ?>
 <?php echo "\n"; ?>
 <?php if ( is_single() ) { ?>
-<meta name="description" itemprop="description" content="<?php echo trim($description); ?>" />
-<meta name="keywords" itemprop="keywords" content="<?php echo rtrim($keywords,','); ?>" />
+<meta name="description" content="<?php echo trim($description); ?>" />
+<meta name="keywords" content="<?php echo rtrim($keywords,','); ?>" />
+<?php } ?>
+<?php if ( is_page() ) { ?>
+<meta name="description" content="<?php $description = get_post_meta($post->ID, 'description', true);{echo $description;}?>" />
+<meta name="keywords" content="<?php $keywords = get_post_meta($post->ID, 'keywords', true);{echo $keywords;}?>" />
+<?php } ?>
+<?php if ( is_category() ) { ?>
+<meta name="description" content="<?php echo category_description( $categoryID ); ?>" />
+<?php } ?>
+<?php if ( is_tag() ) { ?>
+<meta name="description" content="<?php echo single_tag_title(); ?>" />
 <?php } ?>
 <?php if ( is_home() ) { ?>
-<meta name="description" itemprop="description" content="<?php echo of_get_option( 'site_description' ); ?>" />
-<meta name="keywords" itemprop="keywords" content="<?php echo of_get_option( 'site_keyword' ); ?>" />
+<meta name="description" content="<?php echo of_get_option( 'site_description' ); ?>" />
+<meta name="keywords" content="<?php echo of_get_option( 'site_keyword' ); ?>" />
 <?php } ?>

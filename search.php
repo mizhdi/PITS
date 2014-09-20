@@ -21,7 +21,7 @@
 		endif; 
 
 		//page nav 
-		include 'modules/pagenav.php';
+		get_template_part( 'modules/pagenav' );
 
 	?>
 

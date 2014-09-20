@@ -4,12 +4,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-	<?php include "modules/seo.php"; ?>
+	<?php get_template_part ( 'modules/seo' ); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo( 'name' ); ?> RSS Feed" href="<?php bloginfo( 'rss2_url' ); ?>"> 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/assets/css/<?php echo of_get_option( 'site_color', 'grey' ); ?>.css">
+	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/lib/pace.js"></script>
 	<?php if ( of_get_option( 'favicon' ) ) { ?>
 	<link rel="icon" href="<?php echo of_get_option( 'favicon' ); ?>">
 	<link rel="shortcut icon" href="<?php echo of_get_option( 'favicon' ); ?>">
@@ -20,7 +21,10 @@
 		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> 
 		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-	<?php wp_head(); ?>
+	<?php 
+		if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+		wp_head(); 
+	?>
 	<noscript>
 		<p class="text-warning alignment-center"><?php _e('Hello, your browser is disabled Javascript, in order to protect the browsing effect, please turn Javascript enabled.', 'pits'); ?></p>
 	</noscript>
@@ -49,10 +53,10 @@
 					<div class="login">
 						<?php if ( is_user_logged_in() ) { ?>
 							<?php global $current_user;get_currentuserinfo(); echo get_avatar( $current_user->user_email, 80); ?>
-							<a href="<?php bloginfo('url') ?>/wp-admin/"><?php _e('Manage', 'pits'); ?></a>
+							<a href="<?php echo home_url(); ?>/wp-admin/"><?php _e('Manage', 'pits'); ?></a>
 						<?php } else { ?>
 
-							<?php echo get_avatar( get_the_author_email(), '80' );?>
+							<?php echo get_avatar( get_the_author_meta('email'), '80' );?>
 							<a href="<?php echo wp_login_url( get_permalink() ); ?>"><?php _e('Login', 'pits'); ?></a>
 
 						<?php } ?>
@@ -70,7 +74,7 @@
 			<div class="container">
 
 				<hgroup>
-					<h1><a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>" <?php logo_style(); ?>><?php bloginfo( 'name' ); ?></a></h1>
+					<h1><a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" <?php logo_style(); ?>><?php bloginfo( 'name' ); ?></a></h1>
 					<p><?php bloginfo( 'description' ); ?></p>
 				</hgroup>
 
@@ -85,7 +89,7 @@
 		<!-- main content -->
 		<div id="main">
 
-			<div id="flex-box" class="container" 
+			<div id="flex-box" class="<?php echo 'container '.of_get_option( 'sidebar-module' ); ?>"
 			<?php 
 				$bgcolor = of_get_option('content_opacity');
 				echo 'style="background-color:'.$bgcolor.'"';

@@ -4,20 +4,32 @@
 		<!-- footer -->
 		<footer>
 			
-			<div class="container">
+			<div class="container clearfix">
+
+				<?php 
+					$menu = of_get_option( 'footer_menu' );
+
+					if ( close !== $menu ) {
+						wp_nav_menu( array( 
+							'theme_location' => 'secondary', 
+							'menu_class'     => 'footer-menu',
+							'container'      => false ) ); 
+					}
+				?>
+
 				Copyright &copy; <?php echo date('Y'); ?>&nbsp;&nbsp;  
-				<?php _e( 'Proudly powered by' ); ?> <a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"><?php printf( __( '%s' ), 'WordPress' ); ?></a>.&nbsp;&nbsp;
-				<?php _e( 'Theme by' ); ?> <a href="<?php echo esc_url( 'http://pits.qdcode.com' ); ?>" target="_blank"><?php printf( __( '%s' ), 'QDcode' ); ?></a>.&nbsp;&nbsp;<!-- KEEP IT, THANK YOU -->
+				<?php _e( 'Proudly powered by', 'pits' ); ?> <a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"><?php printf( 'WordPress' ); ?></a>.&nbsp;&nbsp;
+				<?php _e( 'Theme by', 'pits' ); ?> <a href="<?php echo esc_url( 'http://pits.qdcode.com' ); ?>" target="_blank"><?php printf( 'QDcode' ); ?></a>.&nbsp;&nbsp;<!-- KEEP IT, THANK YOU -->
 				
 				<?php 
 					$rss = of_get_option( 'social_rss' );
 					if ( $rss ) { 
-						echo '<a href="'.$rss.'" target="_blank"><span class="iconfont icon-dingyue"></span></a>&nbsp';
+						echo '<a href="'.$rss.'" target="_blank"><span class="iconfont icon-dingyue"></span></a>&nbsp;';
 					}
 
 					$weibo = of_get_option( 'social_weibo' );
 					if ( $weibo ) { 
-						echo '<a href="'.$weibo.'" target="_blank"><span class="iconfont icon-gaibanweibo"></span></a>&nbsp;&nbsp';
+						echo '<a href="'.$weibo.'" target="_blank"><span class="iconfont icon-gaibanweibo"></span></a>&nbsp;&nbsp;';
 					} 
 				?>
 				

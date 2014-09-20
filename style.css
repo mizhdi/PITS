@@ -4,7 +4,22 @@ Theme URI:        http://pits.qdcode.com/
 GitHub Theme URI: https://github.com/mizhdi/PITS
 GitHub Branch:    master
 Author:           Sean
-Tags: white, black, orange, two-columns, left-sidebar, fixed-width, blavatar, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments
-Version:          0.1.1
+Author URI:       http://qdcode.com
+Tags:             white, black, orange, two-columns, left-sidebar, blavatar, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments
+Version:          0.2.0
 Description:      A Simple Wordpress Theme
+License:          GNU General Public License v2 or later
+License URI:      http://www.gnu.org/licenses/gpl-2.0.html
 */
+
+
+/*
+** css class is needed in theme css.
+*/
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+.bypostauthor {}
+.alignright {}
+.alignleft {}
+.aligncenter {}

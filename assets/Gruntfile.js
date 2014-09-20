@@ -21,8 +21,8 @@ module.exports = function (grunt) {
 					// 'css/lime.css' : 'sass/main.scss'
 					// 'css/blue.css' : 'sass/main.scss'
 					// 'css/brown.css' : 'sass/main.scss'
-					// 'css/grey.css' : 'sass/main.scss'
-					'css/black.css' : 'sass/main.scss'
+					'css/grey.css' : 'sass/main.scss'
+					// 'css/black.css' : 'sass/main.scss'
 				}
 			}
 

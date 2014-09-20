@@ -3,8 +3,8 @@
 
 	<?php 
 		if ( is_single() ) : 
-			if ( is_active_sidebar( 'sidebar-single' ) ) : 
-				dynamic_sidebar( 'sidebar-single' );
+			if ( is_active_sidebar( 'sidebar-standard' ) ) : 
+				dynamic_sidebar( 'sidebar-standard' );
 			endif;
 		else : 
 			if ( is_active_sidebar( 'sidebar-index' ) ) : 

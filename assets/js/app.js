@@ -4,7 +4,6 @@ requirejs.config({
         "jquery": "lib/jquery",
         "cycle2": "lib/jquery.cycle2",
         "lazyloadxt": "lib/jquery.lazyloadxt",
-        "pace": "lib/pace",
         "dropdown": "lib/dropdown",
         "scrollspy": "lib/scrollspy",
         "pin": "lib/pin",
@@ -21,10 +20,6 @@ requirejs.config({
     	"lazyloadxt": { 
     		deps: ["jquery"],
     		exports: "lazyloadxt" 
-    	},
-    	"pace": {
-    		deps: ["jquery"],
-    		exports: "pace"
     	},
     	"dropdown": {
     		deps: ["jquery"],
@@ -55,11 +50,11 @@ requirejs.config({
 });
 
 // Start the main app logic.
-requirejs(["jquery", "pace", "cycle2", "scrollspy", "lazyloadxt", "dropdown", "pin", "nicescroll", 
-    "infinite-scroll", "fancybox"],
+requirejs(["jquery", "cycle2", "scrollspy", "lazyloadxt", "dropdown", "nicescroll", 
+    "infinite-scroll", "fancybox", "pin"],
 function ($) {
 
-    console.log('my profile');
+    console.log('my profile: \n');
 
 	(function (html) {
 		html.className = html.className.replace(/\bno\-js\b/, 'js');
@@ -79,10 +74,6 @@ function ($) {
 	$.extend($.lazyLoadXT, {
 		edgeY: 200,
 		srcAttr: 'data-src'
-	});
-
-	$(".pin").pin({
-		minWidth: 940
 	});
 
 	$("html").niceScroll();
@@ -108,9 +99,9 @@ function ($) {
         }
     });
 
-     $('.entry-content a').has('img').addClass('fancybox').fancybox({
+    $('.entry-content a').has('img').addClass('fancybox').fancybox({});
 
-     });
+    $(".pin").pin({  minWidth: 940 });
 
       // Go to top
     var goTop = function($) {
@@ -222,15 +213,16 @@ function ($) {
         }
 
     });
+
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) {
+            if ($('body').hasClass('off-canvas-active')) {
+                
+                $('body').removeClass('off-canvas-active');
+            }
+        } 
+    });
      
 
 });
-
-
-define(['pace'], function(pace){
-    pace.start({
-        document: false
-    });
-});
-
 

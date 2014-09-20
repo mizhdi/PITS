@@ -5,14 +5,14 @@
 
 	<?php 
 		if ( is_home() ):
-			include 'modules/slide.php';
+			get_template_part ( 'modules/slide' );
 		endif;
 	?>
 
 	<!-- post loop -->
 	<?php
 
-		include 'modules/sticky.php'; 
+		get_template_part ( 'modules/sticky' );
 
 		if ( have_posts() ) :
 
@@ -27,7 +27,7 @@
 		endif; 
 
 		//page nav 
-		include 'modules/pagenav.php';
+		get_template_part( 'modules/pagenav' );
 	?>
 
 </div> <!-- content end -->

@@ -23,7 +23,6 @@ $color-dividers: rgba(0,0,0,0.06) !default;
 
 
 
-
 //plan2 orange
 
 // $color-accent: #ff9800 !default;
@@ -118,39 +117,39 @@ $color-dividers: rgba(0,0,0,0.06) !default;
 
 // plan7: grey 
 
-// $color-accent: #4d73ff !default;
+$color-accent: #4d73ff !default;
 
 
-// $background-primary: #9e9e9e !default;
-// $bg-primary-text-color: #fff !default;
+$background-primary: #9e9e9e !default;
+$bg-primary-text-color: #fff !default;
 
-// $background-secondary: #616161 !default;
-// $bg-secondary-text-color: rgba(0,0,0,.68) !default;
+$background-secondary: #e0e0e0 !default;
+$bg-secondary-text-color: rgba(0,0,0,.68) !default;
 
-// $background-assistant: #f5f5f5 !default;
-// $bg-assistant-text-color: rgba(0,0,0,.54);
+$background-assistant: #f5f5f5 !default;
+$bg-assistant-text-color: rgba(0,0,0,.54);
 
-// $background-accent: $color-accent !default;
-// $bg-accent-text-color: #fff !default;
+$background-accent: $color-accent !default;
+$bg-accent-text-color: #fff !default;
 
 
 
 
 //plan 8 black
 
-$color-accent: #0074a2 !default;
+// $color-accent: #0074a2 !default;
 
-$background-primary: #000 !default;   //500
-$bg-primary-text-color: #ccc !default;
+// $background-primary: #000 !default;   //500
+// $bg-primary-text-color: #ccc !default;
 
-$background-secondary: #e0e0e0 !default;  //300
-$bg-secondary-text-color: rgba(0,0,0,.68) !default;
+// $background-secondary: #e0e0e0 !default;  //300
+// $bg-secondary-text-color: rgba(0,0,0,.68) !default;
 
-$background-assistant:  #f8f8f8 !default;  //50
-$bg-assistant-text-color: rgba(0,0,0,.54) !default;
+// $background-assistant:  #f8f8f8 !default;  //50
+// $bg-assistant-text-color: rgba(0,0,0,.54) !default;
 
-$background-accent: $color-accent !default;
-$bg-accent-text-color: #fff !default;
+// $background-accent: $color-accent !default;
+// $bg-accent-text-color: #fff !default;
 
 
 
@@ -166,7 +165,7 @@ $font-size-large : 1.6rem !default;
 $font-size-larger : 2rem !default;
 $font-size-largest : 2rem !default;
 // logo default size
-$font-size-logo: 2.5rem !default;
+$font-size-logo: 2rem !default;
 
 
 /*
@@ -382,7 +381,7 @@ $breakpoints: (
 // $layout: nav-menu, menu-togggle, search-box;
 $z-layers: (
 	'off-canvas': (
-		'nav-menu': 99,
+		'nav-menu': -1,
 		'btn': 1000,
 		'logo': 100,
 		'search': 10

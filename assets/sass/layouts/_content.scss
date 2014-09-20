@@ -10,34 +10,46 @@
 		flex-wrap: nowrap;
 		justify-content: space-between;
 	}
-}
 
-#content {
-	@include order(1);
-	@extend %col-md;
+	#content {
+		@extend %col-md;
+		h3 { margin-bottom: 1.5em; }
 
-	&.simple {
-
-		@include respond(medium) {
-			& { @include order(2); }
+		&.status {
+			width: 100%;
 		}
 	}
 
-	&.full {
-		width: 100%;
+	#sidebar {
+		@extend %col-xs;
 	}
 
-	h3 { margin-bottom: 1.5em; }
-}
+	&.left-sidebar {
+		#content {
+			@include respond(medium) {
+				@include order(2);
+			}
+		}
 
-#sidebar {
-	@include order(2);
-	@extend %col-xs;
+		#sidebar {
+			@include respond(medium) {
+				@include order(1);
+			}
+		}
+	}
 
-	&.simple {
+	&.right-sidebar {
+		#content {
+			@include respond(medium) {
+				@include order(1);
+			}
+		}
 
-		@include respond(medium) {
-			& { @include order(1); }
+		#sidebar {
+			@include respond(medium) {
+				@include order(2);
+			}
 		}
 	}
 }
+

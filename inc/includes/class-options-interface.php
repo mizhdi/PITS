@@ -347,10 +347,9 @@ class Options_Framework_Interface {
 					$output .= '<option value="' . esc_attr( $key ) . '" ' . selected( $background['attachment'], $key, false ) . '>' . esc_html( $attachment ) . '</option>';
 				}
 				$output .= '</select>';
-				$output .= '</div>';
 
 				// Background Size
-				$output .= '<select class="of-background of-background-repeat" name="' . esc_attr( $option_name . '[' . $value['id'] . '][size]'  ) . '" id="' . esc_attr( $value['id'] . '_size' ) . '">';
+				$output .= '<select class="of-background of-background-size" name="' . esc_attr( $option_name . '[' . $value['id'] . '][size]'  ) . '" id="' . esc_attr( $value['id'] . '_size' ) . '">';
 				$sizes = of_recognized_background_size();
 
 				foreach ($sizes as $key => $size) {
@@ -358,6 +357,9 @@ class Options_Framework_Interface {
 				}
 				$output .= '</select>';
 
+				$output .= '</div>';
+
+				
 				break;
 
 			// Editor

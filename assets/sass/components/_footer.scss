@@ -1,7 +1,39 @@
 footer {
+
+	font-size: $font-size-small;
+
+	@include respond(medium) {
+		font-size: $font-size-normal;
+	}
+
 	a {
 		span:hover {
 			color: $background-primary!important;
+		}
+	}
+
+	.footer-menu {
+		margin-bottom: 10px;
+		
+		@include respond(medium) {
+			margin-bottom: 0;
+			float: right;
+		}
+
+		> li {
+			display: inline-block;
+			margin: 0 10px 0 0;
+
+			@include respond(medium) {
+				margin: 0 0 0 10px;
+			}
+
+			> a {
+				color: $color-secondary-text;
+				&:hover {
+					color: $color-accent;
+				}
+			}
 		}
 	}
 }
